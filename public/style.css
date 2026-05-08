@@ -1,0 +1,50 @@
+:root {
+    --spotify-green: #1DB954;
+    --bg-dark: #090909;
+    --card-hover: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: var(--bg-dark);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.player-gradient {
+    background: linear-gradient(180deg, rgba(29, 185, 84, 0.1) 0%, var(--bg-dark) 100%);
+}
+
+.music-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.music-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-5px);
+}
+
+.play-btn-float {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: var(--spotify-green);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.music-card:hover .play-btn-float {
+    opacity: 1;
+}
